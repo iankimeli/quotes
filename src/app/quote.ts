@@ -1,7 +1,9 @@
 //import { BrowserPlatformLocation } from '@angular/platform-browser';
 
 export class Quote {
-  showInfo: boolean;
+  [x: string]: string | number | Date;
+  //showInfo: boolean = false;
+  static completeDate:Date;
   constructor(
     public id:number,
     public name:string,
@@ -11,6 +13,6 @@ export class Quote {
     public datePosted: Date,
     public likes:number,
     public dislikes:number){
-      this.showInfo=false;
+      
     }
 }

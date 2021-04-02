@@ -12,9 +12,9 @@
             <div *ngFor="let quote of sortQuotes let i= index" class="card" style="width: 24rem;"  >
               <div class="card-body">
                 <h4 class="card-title" appHighlightQoute >{{quote.title}} {{quote.maxlikes}}<button (click)='displayInfo(i)' class="btn btn-info btn-sm" id="quotes-button" >See More</button></h4>
-                <p class="card-text" id="param">{{quote.quote}}</p>
-                <app-quote-details *ngIf='quote.showInfo' bind-quoty='quote' (isRead)='quoteDelete($event,i)'></app-quote-details>
-                <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.name}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>
+                <p class="card-text" id="param">{{quote.name}}</p>
+                <app-quote-item *ngIf='quote.showInfo' bind-qut='quote' (isRead)='quoteDelete($event,i)'></app-quote-item>
+                <span class="card-subtitle mb-2">Posted by: <span id="name">{{quote.author}}</span><span id="date">on: <span id="datecolor">{{quote.datePosted|date:'short'}}</span></span></span>
                
               </div>
             </div>
